@@ -1,0 +1,7 @@
+version: "3.7"
+
+services:
+  ts-node-docker:
+    build:
+      target: production
+    command: yarn build/index.js || npm build/index.js
