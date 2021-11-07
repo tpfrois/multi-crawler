@@ -8,7 +8,7 @@ export class AmericanasStrategy extends MarketStrategy {
   public async scrape(market: MarketInput): Promise<Product> {
     const page = await super.getStealthPage();
 
-    await page.goto(market.url);
+    await page.goto(market.url, { waitUntil: "networkidle2" });
 
     const [titleElement] = await page.$x(
       "//h1[contains(@class, 'product-title')]"
@@ -70,6 +70,7 @@ export class AmericanasStrategy extends MarketStrategy {
     };
 
     await page.close();
+    await this.browser?.close();
 
     return product;
   }
