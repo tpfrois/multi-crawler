@@ -14,7 +14,7 @@ Instale as dependências
 
 ### Iniciando o server de dev
 
-`make up` ou `docker-compose up -d`
+`make up-dev` ou `docker-compose up -d`
 
 ### Parando o servidor
 
