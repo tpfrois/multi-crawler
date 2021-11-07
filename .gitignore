@@ -6,3 +6,6 @@ build/
 .env
 .env.test
 .env.production
+
+# misc
+*.notes

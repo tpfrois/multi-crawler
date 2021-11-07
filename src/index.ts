@@ -9,6 +9,10 @@ app.use(express.json());
 app.use("/product", productRouter);
 app.use(errors());
 
+app.get("/", (req, res) => {
+  res.send("Multi Crawler");
+});
+
 app.listen(4000, () => {
   console.log("Server is running on port 4000");
 });
